@@ -9,34 +9,38 @@
 </head>
 <body>
 
-    <div id="MenuPanelAndroid">
-        <div id="ControlMenuDrop">
-            <section id="PanelControl">
-                <article id="PanelControlImg">
-                    <img src="Logo.png">
-                </article>
-                <article id="PanelControlText">
-                    <p>CV Digital</p>
-                </article>
-                <article id="PanelControlCancel">
-                    <img src="CancelIconMenu.png" alt="">
-                </article>
-            </section>
-            <ul>
-                <li>Inicio</li>
-                <li>Resumen</li>
-                <li>Habilidades</li>
-                <li>Proyectos</li>
-                <li>Contacto</li>
-            </ul>
+    <div id="contentDropMenu" style="margin: 0%; padding: 0%;">
+        <input id="checkMenu" type="checkbox">
+        <div id="menuPanelAndroid">
+            <div id="controlMenuDrop">
+                <section id="panelControl">
+                    <article id="panelControlImg">
+                        <img src="Logo.png">
+                    </article>
+                    <article id="panelControlText">
+                        <p>CV Digital</p>
+                    </article>
+                    <article id="panelControlCancel">
+                        <img src="CancelIconMenu.png" alt="">
+                    </article>
+                </section>
+                <ul>
+                    <li>Inicio</li>
+                    <li>Resumen</li>
+                    <li>Habilidades</li>
+                    <li>Proyectos</li>
+                    <li>Contacto</li>
+                </ul>
+            </div>
         </div>
     </div>
+
     <header>
         <section>
             <article id="imagenArticle">
                 <img src="Logo.png" alt="">
             </article>
-            <article id="listArticle" style="display: none; visibility: hidden;">
+            <article id="listArticle">
                 <ul>
                     <li class="liHeader notCursor"> <div><img class="activeImageSelector hidden" src="ArrowElement.gif" alt=""></div> <p style="margin-left: 5px;" class="textLetterColor textLetterColorDisable">Inicio</p> </li>
                     <li class="liHeader spaceLetter"> <div><img class="activeImageSelector" src="ArrowElement.gif" alt=""></div> <p class="textLetterColor">Resumen</p></li>
@@ -46,7 +50,7 @@
                 </ul>
             </article>
             <article id="menuAndroid">
-                <img id="activableBottomMenu" src="Menu.png" alt="">
+                <img id="activableBottomMenu"  src="Menu.png" alt="">
             </article>
         </section>
     </header>

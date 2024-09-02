@@ -1,6 +1,5 @@
 const liSelector= document.querySelectorAll('.liHeader');
 
-
 liSelector.forEach(thumb =>{
 
     thumb.addEventListener('click', function(){
@@ -32,5 +31,3 @@ liSelector.forEach(thumb =>{
 
     })
 })
-
-//

@@ -135,12 +135,36 @@ header section
 
 #menuAndroid
 {
-    justify-content: end;
-    display: flex;
-    position: relative;
-    height: 87%;
-    width: 87%;
-    letter-spacing: 0.5px;
+    display: none; 
+    visibility: hidden;
+}
+
+#checkMenu
+{
+    display: none;
+    opacity: 0%;
+    position: absolute;
+    height: var(--heightCheckActive,60px);
+    width:var(--widthCheckActive,60px);
+    left: 1;
+    right: 0;
+    margin-top: var(--marginCheckActive,50px);
+    margin-right: var(--marginRightCheckActive,0px);
+    z-index: 4;
+    
+    
+}
+
+#contentDropMenu:has(:checked)
+{
+    --opasityMenuPanelAdmin:100%;
+    --indexMenuPanelAdmin:2;
+    --relativePositionControlMenuDrop:0px;
+    --displayCheckMenu:flex;
+    --heightCheckActive:40px;
+    --widthCheckActive:40px;
+    --marginCheckActive:35px;
+    --marginRightCheckActive:40px;
 }
 
 #activableBottomMenu
@@ -149,7 +173,7 @@ header section
     position: relative;
     height: 5%;
     width: 5%;
-    transition: 0.3s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 
 #activableBottomMenu:hover
@@ -157,7 +181,7 @@ header section
     opacity: 80%;
 }
 
-#MenuPanelAndroid
+#menuPanelAndroid
 {
     display: flex;
     margin: 0%;
@@ -169,25 +193,30 @@ header section
     background-color: rgba(28, 28, 28, 0.631);
     height: 100%;
     width: 100%;
+    transition: 0.2s ease-in-out;
+    opacity: var(--opasityMenuPanelAdmin,0%);
+    z-index: var(--indexMenuPanelAdmin,-1);
 }
 
-#ControlMenuDrop
+#controlMenuDrop
 {
-    position: relative;
+    position:fixed;
     height: 100%;
     width: 370px;
+    right: var(--relativePositionControlMenuDrop,-600px);
+    transition: 0.5s ease-in-out;
     background-color: rgb(255, 255, 255);
-    transition: 0.5s ease-out;
+
 }
 
-#ControlMenuDrop ul
+#controlMenuDrop ul
 {
     display: flex;
     list-style: none;
     flex-flow: column wrap;
 }
 
-#PanelControl
+#panelControl
 {
     display: flex;
     flex-flow: row wrap;
@@ -199,27 +228,27 @@ header section
     align-items: center;
 }
 
-#PanelControlImg
+#panelControlImg
 {
 position: relative; 
 height: 100%; 
 width: 30%; 
 }
 
-#PanelControlImg img
+#panelControlImg img
 {
     height: 100%;
     width: 100%;
 }
 
-#PanelControlText
+#panelControlText
 {
 position: relative; 
 height: 100%; 
 width: 50%; 
 }
 
-#PanelControlText p
+#panelControlText p
 {
     height: 100%;
     width: 100%;
@@ -227,14 +256,14 @@ width: 50%;
     margin-left: 20px;
 }
 
-#PanelControlCancel
+#panelControlCancel
 {
     position: relative; 
     height: 46%; 
     width: 10%; 
 }
 
-#PanelControlCancel img
+#panelControlCancel img
 {
     margin-top: 9px;
     height: 100%;
@@ -242,21 +271,51 @@ width: 50%;
     transition: 0.5s ease-in;
 }
 
-#PanelControlCancel img:hover
+#panelControlCancel img:hover
 {
     opacity: 30%;
 }
 
-.HiddenDropMenu
+@media screen and (max-width:1068px)
 {
-    
-}
+    #imagenArticle
+    {
+    position: absolute;
+    height: 105px;
+    width: 170px;
+    }
+    #menuAndroid
+    {
+    display:flex; 
+    visibility: visible;
+    justify-content: end;
+    display: flex;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin-top: 28px;
+    letter-spacing: 0.5px;
+    }
 
-.AddSpaceDropAddMenu
-{
- left:-10px;
-}
+    #menuAndroid img
+    {
+        height: 40px;
+        width: 40px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 
+    #listArticle
+    {
+    display: none;
+    visibility: hidden;
+    }
+
+    #checkMenu
+    {
+    display:flex;
+    }
+}
 
 
 
