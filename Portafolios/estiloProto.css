@@ -1,0 +1,130 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap');
+.jacquard-12-regular {
+    font-family: "Jacquard 12", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}  
+
+body
+{
+    margin: 0%;
+    padding: 0%;
+    background-color: rgba(215, 215, 215, 0.859);
+}
+
+header
+{
+ margin: 0%;
+ padding: 0%;
+}
+
+header section
+{
+    display: flex;
+    position: relative;
+    flex-flow: row wrap;
+    align-items: center;
+    background-color: rgb(19, 19, 19);
+    padding: 20px;
+    border-radius: 0% 0% 3% 3%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+#imagenArticle
+{
+    height: 13%;
+    width: 13%;
+}
+
+#imagenArticle img
+{
+    display: flex;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+#listArticle
+{
+    justify-content: end;
+    display: flex;
+    position: relative;
+    height: 87%;
+    width: 87%;
+    letter-spacing: 0.5px;
+}
+
+#listArticle ul
+{
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.textLetterColor
+{
+    color: rgba(255, 255, 255, 0.859);
+}
+
+#listArticle ul li p
+{
+    font-family: "Jacquard 12", system-ui;
+    font-size: 130%;
+    user-select: none;
+}
+
+#listArticle ul li div
+{
+    display: flex;
+    position: absolute;
+    height: 110%;
+    width: 80px;
+    top: 1;
+    justify-content: center;
+    align-items: start;
+}
+
+#listArticle ul li div img
+{
+    position: relative;
+    height:17%;
+    user-select: none;
+}
+
+.activeImageSelector
+{
+    margin: var(--movImg,-5px);
+    opacity: var(--viImg,0%);
+    transition: 0.3s ease-in-out;
+}
+
+.enableImageSelector
+{
+    display: none;
+    visibility: hidden;
+    --objetColorActive:rgb(255, 255, 255);
+}
+
+.activeImg
+{
+
+}
+
+
+
+#listArticle ul li div:hover
+{
+    --viImg:100%;
+    --movImg: 0px;
+}
+
+.hiddenText
+{
+    user-select: none;
+    visibility: hidden;
+}
+.spaceLetter
+{
+ margin-left: 35px;
+}
