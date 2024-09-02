@@ -26,7 +26,7 @@ header section
     flex-flow: row wrap;
     align-items: center;
     background-color: rgb(19, 19, 19);
-    padding: 20px;
+    padding: 15px;
     border-radius: 0% 0% 3% 3%;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
@@ -60,71 +60,203 @@ header section
     list-style: none;
     display: flex;
     flex-flow: row wrap;
+    margin: 0%;
+    padding: 0%;
+}
+
+.textLetterColorDisable
+{
+    color: rgb(255, 255, 255);
+    --borderTextHeader:rgb(255, 255, 255);
+}
+
+.liHeader
+{
+    color:rgba(255, 255, 255, 0.859);
+    cursor:var(--cursorDisable,pointer);
+}
+
+.liHeader:hover
+{
+    color: rgb(255, 255, 255);
+    --borderTextHeader:rgb(255, 255, 255);
+    --viImg:100%;
+    --movImg: 0px;
 }
 
 .textLetterColor
 {
-    color: rgba(255, 255, 255, 0.859);
-}
-
-#listArticle ul li p
-{
     font-family: "Jacquard 12", system-ui;
-    font-size: 130%;
+    font-size: 150%;
+    padding-right: 13px;
     user-select: none;
+    cursor: pointer;
+    border-color: var(--borderTextHeader,rgb(97, 103, 122));
+    border-style: solid;
+    border-width: 0px 3px 0px 0px;
+    transition: 0.3s ease-in-out;
 }
 
-#listArticle ul li div
+.liHeader div
 {
     display: flex;
     position: absolute;
-    height: 110%;
+    height: 100%;
     width: 80px;
     top: 1;
     justify-content: center;
     align-items: start;
 }
 
-#listArticle ul li div img
+.activeImageSelector
 {
     position: relative;
     height:17%;
     user-select: none;
-}
-
-.activeImageSelector
-{
     margin: var(--movImg,-5px);
     opacity: var(--viImg,0%);
     transition: 0.3s ease-in-out;
+    cursor:none;
 }
 
-.enableImageSelector
-{
-    display: none;
-    visibility: hidden;
-    --objetColorActive:rgb(255, 255, 255);
-}
-
-.activeImg
-{
-
-}
-
-
-
-#listArticle ul li div:hover
-{
-    --viImg:100%;
-    --movImg: 0px;
-}
-
-.hiddenText
+.hidden
 {
     user-select: none;
     visibility: hidden;
 }
+.notCursor
+{
+    --cursorDisable:auto;
+}
 .spaceLetter
 {
- margin-left: 35px;
+ margin-left: 45px;
 }
+
+#menuAndroid
+{
+    justify-content: end;
+    display: flex;
+    position: relative;
+    height: 87%;
+    width: 87%;
+    letter-spacing: 0.5px;
+}
+
+#activableBottomMenu
+{
+    display: flex;
+    position: relative;
+    height: 5%;
+    width: 5%;
+    transition: 0.3s ease-in-out;
+}
+
+#activableBottomMenu:hover
+{
+    opacity: 80%;
+}
+
+#MenuPanelAndroid
+{
+    display: flex;
+    margin: 0%;
+    padding: 0%;
+    align-items: start;
+    justify-content: end;
+    position:absolute;
+    z-index: 15;
+    background-color: rgba(28, 28, 28, 0.631);
+    height: 100%;
+    width: 100%;
+}
+
+#ControlMenuDrop
+{
+    position: relative;
+    height: 100%;
+    width: 370px;
+    background-color: rgb(255, 255, 255);
+    transition: 0.5s ease-out;
+}
+
+#ControlMenuDrop ul
+{
+    display: flex;
+    list-style: none;
+    flex-flow: column wrap;
+}
+
+#PanelControl
+{
+    display: flex;
+    flex-flow: row wrap;
+    height: 75px;
+    background-color: rgb(19, 19, 19);
+    padding: 10px;
+    font-family: "Jacquard 12", system-ui;
+    color: rgb(255, 255, 255);
+    align-items: center;
+}
+
+#PanelControlImg
+{
+position: relative; 
+height: 100%; 
+width: 30%; 
+}
+
+#PanelControlImg img
+{
+    height: 100%;
+    width: 100%;
+}
+
+#PanelControlText
+{
+position: relative; 
+height: 100%; 
+width: 50%; 
+}
+
+#PanelControlText p
+{
+    height: 100%;
+    width: 100%;
+    font-size: 190%;
+    margin-left: 20px;
+}
+
+#PanelControlCancel
+{
+    position: relative; 
+    height: 46%; 
+    width: 10%; 
+}
+
+#PanelControlCancel img
+{
+    margin-top: 9px;
+    height: 100%;
+    width: 100%;
+    transition: 0.5s ease-in;
+}
+
+#PanelControlCancel img:hover
+{
+    opacity: 30%;
+}
+
+.HiddenDropMenu
+{
+    
+}
+
+.AddSpaceDropAddMenu
+{
+ left:-10px;
+}
+
+
+
+
