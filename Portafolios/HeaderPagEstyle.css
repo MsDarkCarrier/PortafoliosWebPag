@@ -74,6 +74,7 @@ header section
 {
     color:rgba(255, 255, 255, 0.859);
     cursor:var(--cursorDisable,pointer);
+    user-select: none;
 }
 
 .liHeader:hover

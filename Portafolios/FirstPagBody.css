@@ -144,11 +144,6 @@
     
 }
 
-.blackStyle
-{
-    color: rgb(255, 255, 255);
-    transition: 0.3s ease-in-out;
-}
 
 #firstBallColor
 {
@@ -170,6 +165,14 @@
     background-color: var(--ballColorForur,rgb(62, 62, 62));
 }
 
+.blackStyle
+{
+    color: rgb(255, 255, 255);
+    transition: 0.3s ease-in-out;
+    cursor:pointer;
+    user-select: none;
+}
+
 .blackStyle:hover
 {
     color: rgb(31, 31, 31);
@@ -181,7 +184,8 @@
 {
     color: rgb(31, 31, 31);
     transition: 0.3s ease-in-out;
-
+    cursor:pointer;
+    user-select: none;
 }
 
 .writeStyle:hover
