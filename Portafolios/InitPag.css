@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Jacquarda+Bastarda+9+Charted&family=Jersey+25&family=Lobster&family=Pixelify+Sans:wght@400..700&family=Roboto+Slab:wght@100..900&display=swap');
+
+#contentInitMenu
+{
+    position: fixed;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+    z-index: 10;
+}
+
+#conteinerInitPag
+{
+    position: relative;
+    display: flex;
+    padding: 0%;
+    margin: 0%;
+    width: 100%;
+    flex-flow: row wrap ;
+    font-family: "Jersey 25", sans-serif;
+}
+
+#conteinerInitPagImg
+{
+    display: flex;
+    height: 100%;
+    width: 30%;
+    justify-content:center;
+    align-items: center;
+    background-color: black;
+
+}
+
+#conteinerInitPagImg div img
+{
+    height: 100%;
+    width:100%;
+}
+
+#conteinerInitPagText
+{
+    position: relative;
+    display: flexbox;
+    height: 100%;
+    width: 70%;
+    background: rgb(99,99,99);
+    background: radial-gradient(49% 81% at 45% 47%, #E2E2E2E6 0%, #B5B2B2E6 100%),radial-gradient(113% 91% at 17% -2%, #535353E6 1%, #FF000000 99%),radial-gradient(142% 91% at 83% 7%, #FFFFFFE6 1%, #130101E6 99%);
+}
