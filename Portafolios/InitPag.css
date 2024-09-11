@@ -2,7 +2,7 @@
 
 #contentInitMenu
 {
-    position: fixed;
+    position:fixed;
     display: flex;
     height: 100%;
     width: 100%;
@@ -13,6 +13,7 @@
 
 #conteinerInitPag
 {
+    position: absolute;
     display: flex;
     padding: 0%;
     margin: 0%;
@@ -24,13 +25,13 @@
 
 #conteinerInitPagImg
 {
+    position: relative;
     display: flex;
     height: 100%;
     width: 30%;
     justify-content:center;
     align-items: center;
     background-color: black;
-
 }
 
 #conteinerInitPagImg div img
@@ -41,6 +42,7 @@
 
 #conteinerInitPagText
 {
+    position: relative;
     display: flex;
     height: 100%;
     width: 70%;
@@ -48,11 +50,26 @@
     align-items: center;
 }
 
+#alanTextConteiner
+{
+    font-size: 95px;
+    margin: 0%;
+    margin-bottom: -30px;
+    padding: 0%;
+}
+
+#bienveTextConteiner
+{
+    font-size:28px; 
+    margin-top: 5px; 
+    margin-bottom: 120px;
+}
+
 #spanDeveloperString
 {
     white-space:nowrap;
     overflow: hidden;
-    width:63%;
+    width:var(--witdthSpanDeveloper,63%);
     animation: letterAnimation 3.5s steps(150);
 }
 
@@ -64,6 +81,27 @@
     border-right: 3px solid;
     font-size: 25px;
     animation: opacityBorder 0.5s step-end infinite;
+}
+
+@keyframes letterAnimation
+{
+    from
+    {
+        width:0%;
+    }
+
+    to
+    {
+        width:var(--witdthSpanDeveloper,63%);
+    }
+}
+
+@keyframes opacityBorder
+{
+    50%
+    {
+        border-color: transparent;
+    }
 }
 
 #buttonInitPag
@@ -159,23 +197,212 @@
     width: 2.5%;
 }
 
-@keyframes letterAnimation
-{
-    from
-    {
-        width:0%;
-    }
 
-    to
+
+@media screen and (max-width:1642px)
+{
+    #spanDeveloperString
     {
-        width:63%;
+        --witdthSpanDeveloper:70%;
     }
 }
 
-@keyframes opacityBorder
+@media screen and (max-width:1496px)
 {
-    50%
+    #spanDeveloperString
     {
-        border-color: transparent;
+        --witdthSpanDeveloper:75%;
     }
 }
+
+@media screen and (max-width:1404px)
+{
+    #spanDeveloperString
+    {
+        --witdthSpanDeveloper:80%;
+    }
+}
+
+@media screen and (max-width:1324px)
+{
+    #spanDeveloperString
+    {
+        --witdthSpanDeveloper:85%;
+    }
+}
+
+@media screen and (max-width:1262px)
+{
+    #spanDeveloperString
+    {
+        --witdthSpanDeveloper:90%;
+    }
+}
+
+@media screen and (max-width:1202px)
+{
+    #spanDeveloperString
+    {
+        --witdthSpanDeveloper:90%;
+    }
+}
+
+@media screen and (max-width:1198px)
+{
+    #spanDeveloperString
+    {
+        --witdthSpanDeveloper:100%;
+    }
+}
+
+@media screen and (max-width:1044px)
+{
+    #conteinerInitPag
+    {
+        display: flex; 
+        flex-flow: row wrap;
+    }
+
+    #conteinerInitPagImg div
+    {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        justify-content: start;
+        align-items: center;
+    }
+
+    #conteinerInitPagImg
+    {
+        height: 15%;
+        width: 100%;
+    }
+
+    #conteinerInitPagImg div img
+    {
+    height: 120px;
+    width:120px;
+    }
+
+    #conteinerInitPagText
+    {
+        margin-top: -80px;
+        height: 100%; 
+        width: 100%;
+    }
+
+    #divImgInit
+    {
+        margin-left: -60px;
+    }
+
+    .imgInit
+    {
+    height: 5%;
+    width: 5%;
+    }
+
+    .imgInit:hover
+    {
+    height: 6%;
+    width: 6%;
+    }
+
+}
+
+@media screen and (max-width:732px)
+{
+
+    #conteinerInitPagText
+    {
+        margin-top: -80px;
+        height: 80%; 
+        width: 85%;
+        margin-left:35px;
+    }
+
+    #alanTextConteiner
+    {
+        font-size: 60px;
+    }
+    
+    #bienveTextConteiner
+    {
+        font-size:18px; 
+    }
+    
+    #spanDeveloperString::after
+    {
+    width:fit-content;
+    font-size:15px; 
+    }
+
+    #divImgInit
+    {
+        margin-left: -50px;
+    }
+
+    .imgInit
+    {
+    height: 5%;
+    width: 5%;
+    }
+
+    .imgInit:hover
+    {
+    height: 5%;
+    width: 5%;
+    }
+}
+
+@media screen and (max-width:444px)
+{
+
+    #conteinerInitPagText
+    {
+        margin-top: -80px;
+        height: 80%; 
+        width: 90%;
+        margin-left:20px;
+    }
+
+    #alanTextConteiner
+    {
+        font-size: 60px;
+    }
+    
+    #bienveTextConteiner
+    {
+        font-size:18px; 
+    }
+    
+    #spanDeveloperString::after
+    {
+    width:fit-content;
+    font-size:10px; 
+    }
+
+    #buttonInitPag
+    {
+        margin-top: -80px;
+    }
+
+    #divImgInit
+    {
+        margin-left: -55px;
+    }
+
+    .imgInit
+    {
+    height: 5%;
+    width: 10%;
+    }
+
+    .imgInit:hover
+    {
+    height: 6%;
+    width: 6%;
+    }
+}
+
+
