@@ -2,12 +2,23 @@ const liSelector= document.querySelectorAll('.liHeader');
 const buttonSelection= document.getElementById('buttonInitPag');
 const checkAndroidPanel=document.getElementById('checkMenu');
 
-window.onresize = function (){
-    if(screen.width>=1069 && checkAndroidPanel.checked)
-        {
-            checkAndroidPanel.checked=false;
-        }
- }
+function ready(fn) {
+    if (document.readyState !== 'loading') {
+      fn();
+      return;
+    }
+    document.addEventListener('DOMContentLoaded', fn);
+  }
+  ready(function(){
+    window.onresize = function (){
+        if(screen.width>=1069 && checkAndroidPanel.checked)
+            {
+                checkAndroidPanel.checked=false;
+            }
+     }
+  })
+
+
 
 function enablePagResumen(objetList)
 {
