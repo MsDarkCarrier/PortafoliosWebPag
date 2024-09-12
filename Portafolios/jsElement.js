@@ -1,6 +1,13 @@
 const liSelector= document.querySelectorAll('.liHeader');
 const buttonSelection= document.getElementById('buttonInitPag');
+const checkAndroidPanel=document.getElementById('checkMenu');
 
+window.onresize = function (){
+    if(screen.width>=1069 && checkAndroidPanel.checked)
+        {
+            checkAndroidPanel.checked=false;
+        }
+ }
 
 function enablePagResumen(objetList)
 {
@@ -14,7 +21,11 @@ buttonSelection.addEventListener('click', function(){
     const initPagElim=  document.getElementById('contentInitMenu');
     initPagElim.classList.add('panelElable');
     const  arrayInitComponent= document.querySelectorAll('.animationInicialOut');
-    setTimeout(enablePagResumen(arrayInitComponent), 8);
+    setTimeout(() => {
+        enablePagResumen(arrayInitComponent);
+      }, 500);
+
+
     })
 
 
@@ -44,9 +55,6 @@ liSelector.forEach(thumb =>{
 
 
         }
-
-
-
     })
 })
 
