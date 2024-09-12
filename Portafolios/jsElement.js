@@ -1,4 +1,22 @@
 const liSelector= document.querySelectorAll('.liHeader');
+const buttonSelection= document.getElementById('buttonInitPag');
+
+
+function enablePagResumen(objetList)
+{
+    objetList.forEach(elementInitElable=>{
+        elementInitElable.classList.remove('animationInicialOut');
+    })
+
+}
+
+buttonSelection.addEventListener('click', function(){
+    const initPagElim=  document.getElementById('contentInitMenu');
+    initPagElim.classList.add('panelElable');
+    const  arrayInitComponent= document.querySelectorAll('.animationInicialOut');
+    setTimeout(enablePagResumen(arrayInitComponent), 8);
+    })
+
 
 liSelector.forEach(thumb =>{
 
@@ -31,3 +49,5 @@ liSelector.forEach(thumb =>{
 
     })
 })
+
+
