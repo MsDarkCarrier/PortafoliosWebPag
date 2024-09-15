@@ -10,6 +10,7 @@ function ready(fn) {
     document.addEventListener('DOMContentLoaded', fn);
   }
   ready(function(){
+    checkAndroidPanel.checked=false;
     window.onresize = function (){
         if(screen.width>=1069 && checkAndroidPanel.checked)
             {
