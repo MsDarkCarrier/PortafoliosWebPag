@@ -32,6 +32,8 @@ buttonSelection.addEventListener('click', function(){
     const initPagElim=  document.getElementById('contentInitMenu');
     initPagElim.classList.add('panelElable');
     const  arrayInitComponent= document.querySelectorAll('.animationInicialOut');
+    document.getElementById('contentInitMenu').classList.remove('initAnimationIn');
+    
     setTimeout(() => {
         enablePagResumen(arrayInitComponent);
       }, 500);
@@ -62,6 +64,25 @@ liSelector.forEach(thumb =>{
 
             const newImgTextDisable= this.querySelector('.textLetterColor');
             newImgTextDisable.classList.add('textLetterColorDisable');
+
+            switch(newImgTextDisable.textContent)
+            {
+                case('Inicio'):
+                location.reload();
+                break;
+
+                case('Resumen'):
+                break;
+
+                case('Skills'):
+                break;
+
+                case('Proyectos'):
+                break;
+
+                case('Contacto'):
+                break;
+            }
 
 
 
