@@ -66,6 +66,7 @@ header section
     flex-flow: row wrap;
     margin: 0%;
     padding: 0%;
+    transition: 0.2s ease-out;
 }
 
 .textLetterColorDisable
@@ -314,10 +315,27 @@ width: 50%;
 
 .disableDisplay
 {
+    animation-name: leftAnimationDisplay ;
+    animation-duration: 0.25s;
+    animation-timing-function: ease-out;
+}
+.opacityControl
+{
+    opacity: 100%;
 }
 
-.marginRight
+@keyframes leftAnimationDisplay
 {
+    from
+    {
+        margin-right: 0px;
+        opacity: 100%;
+    }
+    to
+    {
+        margin-right: -200px;
+        opacity: 0%;
+    }
 }
 
 
@@ -373,18 +391,27 @@ width: 50%;
     {
         flex-flow: column wrap;
         position: fixed;
-        margin: 0%;
-        margin-top: 88px;
-        margin-right: 60px;
-        z-index: 10;
+        right: 15px;
+        z-index: 3;
         padding: 0%;
+        height: 100%;
+        width: 370px;
+        padding-top: 100px;
+
+    }
+
+    .opacityControl
+    {
+    opacity:0%;
     }
 
     .liHeader
     {
+    position: relative;
+    height: 50px;
+    width: 150px;
     color:rgb(19, 19,19);
     padding: 0%;
-    margin-bottom: -18px;
     }
 
     .liHeader:hover
@@ -415,10 +442,6 @@ width: 50%;
         visibility: hidden;
     }
 
-    .marginRight
-    {
-    margin-right: 1000px;
-    }
 }
 
 

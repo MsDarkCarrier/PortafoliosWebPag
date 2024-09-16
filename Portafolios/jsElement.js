@@ -1,7 +1,7 @@
 const liSelector= document.querySelectorAll('.liHeader');
 const buttonSelection= document.getElementById('buttonInitPag');
 const checkAndroidPanel=document.getElementById('checkMenu');
-const checkSelectorList=document.getElementById('listArticle');
+const checkSelectorList=document.getElementById('listArticle').querySelector('.disableDisplay');
 
 function ready(fn) {
     if (document.readyState !== 'loading') {
@@ -25,15 +25,15 @@ function ready(fn) {
   checkAndroidPanel.addEventListener('change',()=>{
     if(checkAndroidPanel.checked)
         {
-            checkSelectorList.classList.remove('marginRight');
+            checkSelectorList.classList.remove('opacityControl');
             setTimeout(() => {
                 checkSelectorList.classList.remove('disableDisplay');
               },350);
         } 
     else
     {
+        checkSelectorList.classList.add('opacityControl');
         checkSelectorList.classList.add('disableDisplay');
-        checkSelectorList.classList.add('marginRight');
     } 
   })
 
