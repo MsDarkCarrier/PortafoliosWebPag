@@ -1,6 +1,7 @@
 const liSelector= document.querySelectorAll('.liHeader');
 const buttonSelection= document.getElementById('buttonInitPag');
 const checkAndroidPanel=document.getElementById('checkMenu');
+const checkSelectorList=document.getElementById('listArticle');
 
 function ready(fn) {
     if (document.readyState !== 'loading') {
@@ -14,11 +15,27 @@ function ready(fn) {
     window.onresize = function (){
         if(screen.width>=1069 && checkAndroidPanel.checked)
             {
+                checkSelectorList.classList.add('disableDisplay');
                 checkAndroidPanel.checked=false;
             }
      }
+
   })
 
+  checkAndroidPanel.addEventListener('change',()=>{
+    if(checkAndroidPanel.checked)
+        {
+            checkSelectorList.classList.remove('marginRight');
+            setTimeout(() => {
+                checkSelectorList.classList.remove('disableDisplay');
+              },350);
+        } 
+    else
+    {
+        checkSelectorList.classList.add('disableDisplay');
+        checkSelectorList.classList.add('marginRight');
+    } 
+  })
 
 
 function enablePagResumen(objetList)
