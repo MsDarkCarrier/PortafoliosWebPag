@@ -209,19 +209,24 @@ header
     margin: 0%;
 }   
 
-#conteinerBallsInformations li div
+#conteinerBallsInformations li button
 {
     text-align: center;
     height: 100%;
     width: 70%;
     padding: 0%;
     border-radius:50%;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
-#conteinerBallsInformations li div p
+#conteinerBallsInformations li button img
 {
-    margin-top: 40%;
-    margin-bottom: 40%;
+    height: 60%;
+    width: 60%;
+    margin-top: 20%;
+    margin-bottom: 20%;
+    user-select: none;
 }
 
 .adicionalSpaceList
@@ -245,7 +250,7 @@ header
     background-color: var(--ballColorTre,rgb(31, 31, 31));
 }
 
-#fourBallCollor
+#fourBallCollor 
 {
     background-color: var(--ballColorForur,rgb(62, 62, 62));
 }
@@ -259,12 +264,24 @@ header
     font-size: 33px;
 }
 
+.blackStyle .blackImgBall
+{
+ display: var(--ballDisableBlackStyle,none);
+}
+
+.blackStyle .writeImgBall
+{
+ display: var(--ballActiveBlackStyle,auto);
+}
+
 .blackStyle:hover
 {
     color: rgb(31, 31, 31);
     --ballColorForur:rgb(186,186,186);
     --ballColorTre:rgb(255, 255, 255);
     font-size: 30px;
+    --ballDisableBlackStyle:auto;
+    --ballActiveBlackStyle:none;
 }
 
 .writeStyle
@@ -276,12 +293,24 @@ header
     font-size: 33px;
 }
 
+.writeStyle .writeImgBall
+{
+    display: var(--ballDisableWriteStyle,none);
+}
+
+.writeStyle .blackImgBall
+{
+    display: var(--ballActiveWriteStyle,auto);
+}
+
 .writeStyle:hover
 {
     --ballColorTwo:rgb(62, 62, 62);
     --ballColorOne:rgb(31, 31, 31);
     color:rgb(255, 255, 255);
     font-size: 30px;
+    --ballDisableWriteStyle:auto;
+    --ballActiveWriteStyle:none;
 }
 
 

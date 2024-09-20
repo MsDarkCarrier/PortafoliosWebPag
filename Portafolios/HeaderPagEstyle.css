@@ -315,9 +315,7 @@ width: 50%;
 
 .disableDisplay
 {
-    animation-name: leftAnimationDisplay ;
-    animation-duration: 0.25s;
-    animation-timing-function: ease-out;
+
 }
 .opacityControl
 {
@@ -438,6 +436,9 @@ width: 50%;
     
     .disableDisplay
     {
+        animation-name: leftAnimationDisplay ;
+        animation-duration: 0.25s;
+        animation-timing-function: ease-out;
         display: none;
         visibility: hidden;
     }

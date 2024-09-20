@@ -17,6 +17,7 @@ function ready(fn) {
             {
                 checkSelectorList.classList.add('disableDisplay');
                 checkAndroidPanel.checked=false;
+
             }
      }
 
@@ -28,7 +29,7 @@ function ready(fn) {
             checkSelectorList.classList.remove('opacityControl');
             setTimeout(() => {
                 checkSelectorList.classList.remove('disableDisplay');
-              },350);
+              },360);
         } 
     else
     {
@@ -90,22 +91,26 @@ liSelector.forEach(thumb =>{
                 break;
 
                 case('Resumen'):
+
                 break;
 
                 case('Skills'):
+
                 break;
 
                 case('Proyectos'):
+
                 break;
 
                 case('Contacto'):
+
                 break;
             }
-
-
 
         }
     })
 })
+
+
 
 
