@@ -68,7 +68,17 @@
     padding: 0px 8px 0px 8px;
 }
 
+.spaceIcon
+{
+    margin-top: 15px;
+}
+
 .marginIcon
 {
  margin-right:7px ;
+}
+
+.aditionalSpaceIcon
+{
+ margin-bottom:15px ;
 }
