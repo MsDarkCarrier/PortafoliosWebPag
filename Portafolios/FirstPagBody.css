@@ -1,6 +1,5 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Jacquarda+Bastarda+9+Charted&family=Jersey+25&family=Lobster&family=Pixelify+Sans:wght@400..700&family=Roboto+Slab:wght@100..900&display=swap');
-
 header
 {
     animation-name: InitPagOne;
@@ -133,6 +132,7 @@ header
    height: 100%;
    width: 100%;
    padding: 12px;
+   margin-bottom: 80px;
 
 }  
 
@@ -405,6 +405,14 @@ header
     #imageConteinerSection
     {
     width: 90%;
+    }
+}
+
+@media screen and (max-width:408px)
+{
+    #conteinerBallsInformations
+    {
+        margin-left: -20px;
     }
 }
 

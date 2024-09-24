@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jacquarda+Bastarda+9+Charted&family=Jersey+25&family=Lobster&family=Pixelify+Sans:wght@400..700&family=Roboto+Slab:wght@100..900&display=swap');
 
+
 #secPagConeiner
 {
+    align-items:end;
     font-family: 'Jersey 25', sans-serif;
     background-color: none;
     height: 100%;
@@ -132,6 +134,10 @@
     width: 310px;
 }
 
+.ulContext
+{
+    
+}
 
 @media screen and (max-width:1107px)
 {
@@ -148,7 +154,7 @@
     {
     height: 100%;
     width: 100%;
-    margin-left: -90px;
+    margin-left: 0px;
     }
 }
 
@@ -169,6 +175,11 @@
     }
     #secPagConeiner
     {
-    margin-left: -70px;
+    margin-left: -35px;
+    }
+    .ulContext
+    {
+        height: 100%;
+        width: 100%;
     }
 }
