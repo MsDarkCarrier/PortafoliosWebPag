@@ -17,7 +17,6 @@ header
    animation-name: InitPagOne;
    animation-duration: 0.8s;
    animation-timing-function: linear;
-   background-color: rgba(0, 0, 0, 0.024);
 }
 
 #conteinerSections section
@@ -41,7 +40,6 @@ header
 #imageConteinerSection div
 {
     display: flex;
-    background-color: rgba(167, 165, 165, 0.859); 
     padding: 11px;
     height: 100%;
     width: 100%;

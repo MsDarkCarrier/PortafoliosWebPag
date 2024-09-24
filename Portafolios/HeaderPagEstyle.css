@@ -10,6 +10,7 @@ body
 {
     margin: 0%;
     padding: 0%;
+    background-color: rgba(0, 0, 0, 0.024);
     background: rgb(99,99,99); 
     background: radial-gradient(49% 81% at 45% 47%, #E2E2E2E6 0%, #B5B2B2E6 100%),radial-gradient(113% 91% at 17% -2%, #535353E6 1%, #FF000000 99%),radial-gradient(142% 91% at 83% 7%, #FFFFFFE6 1%, #130101E6 99%);
     background-size: cover;

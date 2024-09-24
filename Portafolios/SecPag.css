@@ -4,7 +4,27 @@
 #secPagConeiner
 {
     font-family: 'Jersey 25', sans-serif;
+    background-color: none;
+    height: 100%;
+    width: 66%;
+    margin: 0%;
+    padding: 0%;
 }
+
+#secPagConeiner section 
+{
+    height: 100%; 
+    width: 100%; 
+    position: relative;
+}
+
+#secPagConeiner section article
+{
+    height: 100%; 
+    width: 100%; 
+    position: relative;
+}
+
 
 .secPagList
 {
@@ -81,4 +101,74 @@
 .aditionalSpaceIcon
 {
  margin-bottom:15px ;
+}
+
+.colorEU
+{
+    background-color: rgb(133, 182, 196);
+    width: 120px;
+}
+
+.colorJP
+{
+    background-color: rgb(10, 52, 81);
+    width: 120px;
+}
+
+.colorContexBlack
+{
+    background-color: rgb(31, 31, 31); 
+    width: 310px;
+}
+
+.colorContexWrite
+{
+    background-color: rgb(63, 63, 63);
+    width: 310px;
+}
+.colorSpecial
+{
+    background-color: var(--colorPropertySec,rgb(31, 31, 31)); 
+    width: 310px;
+}
+
+
+@media screen and (max-width:1107px)
+{
+    .colorSpecial
+    {
+        --colorPropertySec:rgb(63, 63, 63); 
+        width: 310px;
+    }
+}
+
+@media screen and (max-width:608px)
+{
+    #secPagConeiner
+    {
+    height: 100%;
+    width: 100%;
+    margin-left: -90px;
+    }
+}
+
+@media screen and (max-width:408px)
+{
+    .colorContexBlack
+    {
+    width: 100%;
+    }
+
+    .colorContexWrite
+    {
+        width: 100%;
+    }
+    .colorSpecial
+    {
+        width: 100%;
+    }
+    #secPagConeiner
+    {
+    margin-left: -70px;
+    }
 }
