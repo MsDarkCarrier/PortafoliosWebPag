@@ -20,7 +20,9 @@ function ready(fn) {
 
             }
      }
-
+     window.addEventListener('scroll',function(){
+        console.log(window.scrollY);
+     })
   })
 
   checkAndroidPanel.addEventListener('change',()=>{

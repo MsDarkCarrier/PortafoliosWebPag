@@ -5,25 +5,27 @@ header
     animation-name: InitPagOne;
     animation-duration: 0.8s;
     animation-timing-function: linear;
+    margin-bottom: 30px;
 }
 
 #conteinerSections
 {
    margin: 0%;
    padding: 0%;
+   position: relative;
    padding: 35px;
-   padding-left: 15px;
    animation-name: InitPagOne;
    animation-duration: 0.8s;
    animation-timing-function: linear;
+
 }
 
 #conteinerSections section
 {
     display:flex;
     flex-flow: row wrap ;
-    margin: 35px;
     margin-top: 55px;
+    margin: 0%;
     padding: 0%;
     font-family: "Jersey 25", sans-serif;
 }
@@ -32,8 +34,9 @@ header
 {
     position: relative;
     height: 100%;
-    width: 31%;
-    margin-right: 3%;
+    width: 27%;
+    margin-right: 5%;
+
 }
 
 #imageConteinerSection div
@@ -111,6 +114,7 @@ header
     width: 100%;
     color:rgb(31, 31, 31) ;
     opacity: 100%;
+    
 }
 
 #imageConteinerSection img
@@ -195,8 +199,8 @@ header
     list-style: none;
     height: 100%;
     width: 100%;
-    align-items: center;
-    justify-content: center;
+    margin: 0%;
+    padding: 0%;
 }
 #conteinerBallsInformations li
 { 
@@ -204,6 +208,8 @@ header
     height: 25%;
     width: 25%;
     text-align: center;
+    align-items: center;
+    justify-content: center;
     margin: 0%;
 }   
 
@@ -405,14 +411,6 @@ header
     #imageConteinerSection
     {
     width: 90%;
-    }
-}
-
-@media screen and (max-width:408px)
-{
-    #conteinerBallsInformations
-    {
-        margin-left: -20px;
     }
 }
 

@@ -323,6 +323,14 @@ width: 50%;
     opacity: 100%;
 }
 
+.hiddenTextSpancer
+{
+    background-color: rgba(19, 19, 19, 0.809);
+    font-size: 5px;
+    height: 100%; 
+    width: 100%;
+}
+
 @keyframes leftAnimationDisplay
 {
     from
