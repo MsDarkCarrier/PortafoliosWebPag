@@ -1,5 +1,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Jacquarda+Bastarda+9+Charted&family=Jersey+25&family=Lobster&family=Pixelify+Sans:wght@400..700&family=Roboto+Slab:wght@100..900&display=swap');
+html
+{
+scroll-behavior: smooth;
+}
+
 header
 {
     animation-name: InitPagOne;

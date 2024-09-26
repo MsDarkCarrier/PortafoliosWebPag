@@ -26,14 +26,25 @@ function ready(fn) {
 
      window.addEventListener('scroll',function(){
 
-        if(ScrollDelta(this)==-1)
-        {
-            if(this.window.scrollY>604 && this.window.scrollY<700)
-            {
-                var oldScroll=this.window.scrollY,maxSroll=1328;
-                LerpFuncion(oldScroll,maxSroll,this);
+        
 
-            } 
+        if(ScrollDelta(this)==-1)
+        {   
+            var movSelectorDown=0;
+            var secPagDirection=GetScrollRealObject(this.window.scrollY,document.getElementById('secPagDirection').getBoundingClientRect().y) -150;
+            var referenceSecPag=(this.window.scrollY>secPagDirection && this.window.scrollY<(secPagDirection+200)?2:0);
+            movSelectorDown=referenceSecPag;
+
+            switch(movSelectorDown)
+            {
+                case(2):
+                var oldScroll=this.window.scrollY;
+                var maxSroll=GetScrollRealObject(this.window.scrollY,document.getElementById('callSecPag').getBoundingClientRect().y);
+                LerpFuncion(oldScroll,maxSroll,this);
+                break;
+            }
+
+
         }
 
         else if(ScrollDelta(this)==1)
@@ -106,6 +117,7 @@ liSelector.forEach(thumb =>{
 
             const newImgTextDisable= this.querySelector('.textLetterColor');
             newImgTextDisable.classList.add('textLetterColorDisable');
+            var pannel = document.getElementById('pannel');
 
             switch(newImgTextDisable.textContent)
             {
@@ -118,6 +130,10 @@ liSelector.forEach(thumb =>{
                 break;
 
                 case('Skills'):
+
+                var oldScroll=window.scrollY;
+                var maxSroll=GetScrollRealObject(window.scrollY,document.getElementById('callSecPag').getBoundingClientRect().y);
+                LerpFuncion(oldScroll,maxSroll,window);
 
                 break;
 
@@ -152,20 +168,21 @@ function LerpFuncion(oldScroll,maxSroll,realScroll)
 {
     document.body.classList.add('stopScrolling');
     var temValue=0;
+
     while(temValue<1)
     {
         realScroll.window.scrollTo(realScroll.window.scrollX, Lerp(oldScroll,maxSroll,temValue));
         temValue+=0.1;
     }
     document.body.classList.remove('stopScrolling');
-        
 }
 
 function Lerp(min, max, value) {
-	return (max - min) * value+ min;
+	return ((max - min) * value)+ min;
 }
 
-
-
-
+function GetScrollRealObject(positionRealScroll,objetRelativeScroll)
+{
+    return (positionRealScroll+objetRelativeScroll);
+}
 
