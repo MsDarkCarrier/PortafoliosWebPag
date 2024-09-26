@@ -2,6 +2,7 @@ const liSelector= document.querySelectorAll('.liHeader');
 const buttonSelection= document.getElementById('buttonInitPag');
 const checkAndroidPanel=document.getElementById('checkMenu');
 const checkSelectorList=document.getElementById('listArticle').querySelector('.disableDisplay');
+var lastScroll;
 
 function ready(fn) {
     if (document.readyState !== 'loading') {
@@ -20,8 +21,28 @@ function ready(fn) {
 
             }
      }
+
+     lastScroll=0;
+
      window.addEventListener('scroll',function(){
-        console.log(window.scrollY);
+
+        if(ScrollDelta(this)==-1)
+        {
+            if(this.window.scrollY>604 && this.window.scrollY<700)
+            {
+                var oldScroll=this.window.scrollY,maxSroll=1328;
+                LerpFuncion(oldScroll,maxSroll,this);
+
+            } 
+        }
+
+        else if(ScrollDelta(this)==1)
+        {
+            if(this.window.scrollY>604 && this.window.scrollY<500)
+                {
+                } 
+        }
+
      })
   })
 
@@ -112,6 +133,38 @@ liSelector.forEach(thumb =>{
         }
     })
 })
+
+
+function ScrollDelta(scrollWindows)
+{
+    if(lastScroll==0) lastScroll= scrollWindows.window.scrollY;
+
+    var newScroll= scrollWindows.window.scrollY;
+
+    var scrollDeltavar= (lastScroll>=newScroll)? 1:-1;
+
+    lastScroll=this.window.scrollY;
+
+    return scrollDeltavar;
+}
+
+function LerpFuncion(oldScroll,maxSroll,realScroll)
+{
+    document.body.classList.add('stopScrolling');
+    var temValue=0;
+    while(temValue<1)
+    {
+        realScroll.window.scrollTo(realScroll.window.scrollX, Lerp(oldScroll,maxSroll,temValue));
+        temValue+=0.1;
+    }
+    document.body.classList.remove('stopScrolling');
+        
+}
+
+function Lerp(min, max, value) {
+	return (max - min) * value+ min;
+}
+
 
 
 

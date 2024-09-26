@@ -6,6 +6,11 @@
     font-style: normal;
 }  
 
+.stopScrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
 body
 {
     margin: 0%;
