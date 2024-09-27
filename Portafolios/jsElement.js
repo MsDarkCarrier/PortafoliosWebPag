@@ -26,8 +26,7 @@ function ready(fn) {
 
      window.addEventListener('scroll',function(){
 
-        
-
+  
         if(ScrollDelta(this)==-1)
         {   
             var movSelectorDown=0;
@@ -41,6 +40,31 @@ function ready(fn) {
                 var oldScroll=this.window.scrollY;
                 var maxSroll=GetScrollRealObject(this.window.scrollY,document.getElementById('callSecPag').getBoundingClientRect().y);
                 LerpFuncion(oldScroll,maxSroll,this);
+                
+                for(x=0; x<liSelector.length;x++)
+                    {
+                        
+                        if(liSelector[x].id=="skillsId" && (!liSelector[x].querySelector('.hidden') || !liSelector[x].querySelector('.textLetterColorDisable')))
+                            {
+                                const newImageDisable= liSelector[x].querySelector('.activeImageSelector');
+                                newImageDisable.classList.add('hidden');
+                    
+                                const newImgTextDisable= liSelector[x].querySelector('.textLetterColor');
+                                newImgTextDisable.classList.add('textLetterColorDisable');
+                                continue;
+
+                            } else if(liSelector[x].id!="skillsId" && (liSelector[x].querySelector('.hidden') || liSelector[x].querySelector('.textLetterColorDisable')))
+                                {
+                                    const imgDisable= liSelector[x].querySelector('.hidden');
+                                    imgDisable.classList.remove('hidden');
+                        
+                                    const imgTextDisable=liSelector[x].querySelector('.textLetterColorDisable');
+                                    imgTextDisable.classList.remove('textLetterColorDisable');
+                                    continue;
+                                }
+                                    
+
+                    }
                 break;
             }
 
@@ -99,10 +123,9 @@ liSelector.forEach(thumb =>{
 
     thumb.addEventListener('click', function(){
 
-        if(!this.querySelector('.hidden')&& !this.querySelector('.textLetterColorDisable')){
+        if(!this.querySelector('.hidden') || !this.querySelector('.textLetterColorDisable')){
             
             // Elimina las clases ocultas actuales
-
             const imgDisable= document.querySelector('.hidden');
             imgDisable.classList.remove('hidden');
 
