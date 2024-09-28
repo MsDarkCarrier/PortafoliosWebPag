@@ -26,12 +26,13 @@ function ready(fn) {
 
      window.addEventListener('scroll',function(){
 
+        //console.log(this.window.scrollY);
   
         if(ScrollDelta(this)==-1)
         {   
             var movSelectorDown=0;
-            var secPagDirection=GetScrollRealObject(this.window.scrollY,document.getElementById('secPagDirection').getBoundingClientRect().y) -150;
-            var referenceSecPag=(this.window.scrollY>secPagDirection && this.window.scrollY<(secPagDirection+200)?2:0);
+            var secPagDirection=GetScrollRealObject(this.window.scrollY,document.getElementById('secondPagTriggerDown').getBoundingClientRect().y) -150;
+            var referenceSecPag=(this.window.scrollY>secPagDirection && this.window.scrollY<(secPagDirection+200))?2:0;
             movSelectorDown=referenceSecPag;
 
             switch(movSelectorDown)
@@ -53,19 +54,20 @@ function ready(fn) {
 
             
             var movSelectorDown=0;
-            var secPagDirection=GetScrollRealObject(this.window.scrollY,document.getElementById('secPagDirection').getBoundingClientRect().y) -150;
-            var referenceSecPag=(this.window.scrollY>secPagDirection && this.window.scrollY<(secPagDirection+200)?2:0);
+            var secPagDirection=GetScrollRealObject(this.window.scrollY,document.getElementById('firstPagTriggerUp').getBoundingClientRect().y)+150;
+            var referenceSecPag=(this.window.scrollY<secPagDirection && this.window.scrollY>(secPagDirection-200))?1:0;
+
             movSelectorDown=referenceSecPag;
             
             switch(movSelectorDown)
             {
-                case(2):
-                /*
+                case(1):
+                
                 var oldScroll=this.window.scrollY;
                 var maxSroll=0;
                 LerpFuncion(oldScroll,maxSroll,this);
                 EfectElementHeader("resumenId");
-                */
+                
                 break;
             }
             
@@ -129,7 +131,10 @@ liSelector.forEach(thumb =>{
             break;
 
             case("resumenId"):
-            
+            var oldScroll=this.window.scrollY;
+            var maxSroll=0;
+            LerpFuncion(oldScroll,maxSroll,this);
+            EfectElementHeader("resumenId");
             break;
 
             case("skillsId"):
