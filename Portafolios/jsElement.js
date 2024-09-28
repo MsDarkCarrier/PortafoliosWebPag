@@ -40,31 +40,8 @@ function ready(fn) {
                 var oldScroll=this.window.scrollY;
                 var maxSroll=GetScrollRealObject(this.window.scrollY,document.getElementById('callSecPag').getBoundingClientRect().y);
                 LerpFuncion(oldScroll,maxSroll,this);
+                EfectElementHeader("skillsId");
                 
-                for(x=0; x<liSelector.length;x++)
-                    {
-                        
-                        if(liSelector[x].id=="skillsId" && (!liSelector[x].querySelector('.hidden') || !liSelector[x].querySelector('.textLetterColorDisable')))
-                            {
-                                const newImageDisable= liSelector[x].querySelector('.activeImageSelector');
-                                newImageDisable.classList.add('hidden');
-                    
-                                const newImgTextDisable= liSelector[x].querySelector('.textLetterColor');
-                                newImgTextDisable.classList.add('textLetterColorDisable');
-                                continue;
-
-                            } else if(liSelector[x].id!="skillsId" && (liSelector[x].querySelector('.hidden') || liSelector[x].querySelector('.textLetterColorDisable')))
-                                {
-                                    const imgDisable= liSelector[x].querySelector('.hidden');
-                                    imgDisable.classList.remove('hidden');
-                        
-                                    const imgTextDisable=liSelector[x].querySelector('.textLetterColorDisable');
-                                    imgTextDisable.classList.remove('textLetterColorDisable');
-                                    continue;
-                                }
-                                    
-
-                    }
                 break;
             }
 
@@ -73,9 +50,27 @@ function ready(fn) {
 
         else if(ScrollDelta(this)==1)
         {
-            if(this.window.scrollY>604 && this.window.scrollY<500)
-                {
-                } 
+
+            
+            var movSelectorDown=0;
+            var secPagDirection=GetScrollRealObject(this.window.scrollY,document.getElementById('secPagDirection').getBoundingClientRect().y) -150;
+            var referenceSecPag=(this.window.scrollY>secPagDirection && this.window.scrollY<(secPagDirection+200)?2:0);
+            movSelectorDown=referenceSecPag;
+            
+            switch(movSelectorDown)
+            {
+                case(2):
+                /*
+                var oldScroll=this.window.scrollY;
+                var maxSroll=0;
+                LerpFuncion(oldScroll,maxSroll,this);
+                EfectElementHeader("resumenId");
+                */
+                break;
+            }
+            
+            
+
         }
 
      })
@@ -123,53 +118,33 @@ liSelector.forEach(thumb =>{
 
     thumb.addEventListener('click', function(){
 
-        if(!this.querySelector('.hidden') || !this.querySelector('.textLetterColorDisable')){
+        var idName=this.id;
+
+        EfectElementHeader(idName);
+        
+        switch(idName)
+        {
+            case("inicioId"):
+            location.reload();
+            break;
+
+            case("resumenId"):
             
-            // Elimina las clases ocultas actuales
-            const imgDisable= document.querySelector('.hidden');
-            imgDisable.classList.remove('hidden');
+            break;
 
-            const imgTextDisable= document.querySelector('.textLetterColorDisable');
-            imgTextDisable.classList.remove('textLetterColorDisable');
+            case("skillsId"):
+            var oldScroll=window.scrollY;
+            var maxSroll=GetScrollRealObject(window.scrollY,document.getElementById('callSecPag').getBoundingClientRect().y);
+            LerpFuncion(oldScroll,maxSroll,window);
+            break;
 
+            case("proyectoId"):
+            break;
 
-            //Añade clases ocultas a nuevos objetos
-
-            const newImageDisable= this.querySelector('.activeImageSelector');
-            newImageDisable.classList.add('hidden');
-
-            const newImgTextDisable= this.querySelector('.textLetterColor');
-            newImgTextDisable.classList.add('textLetterColorDisable');
-            var pannel = document.getElementById('pannel');
-
-            switch(newImgTextDisable.textContent)
-            {
-                case('Inicio'):
-                location.reload();
-                break;
-
-                case('Resumen'):
-
-                break;
-
-                case('Skills'):
-
-                var oldScroll=window.scrollY;
-                var maxSroll=GetScrollRealObject(window.scrollY,document.getElementById('callSecPag').getBoundingClientRect().y);
-                LerpFuncion(oldScroll,maxSroll,window);
-
-                break;
-
-                case('Proyectos'):
-
-                break;
-
-                case('Contacto'):
-
-                break;
-            }
-
+            case("contactoId"):
+            break;
         }
+       
     })
 })
 
@@ -209,3 +184,30 @@ function GetScrollRealObject(positionRealScroll,objetRelativeScroll)
     return (positionRealScroll+objetRelativeScroll);
 }
 
+function EfectElementHeader(idElementSelect)
+{
+    for(x=0; x<liSelector.length;x++)
+        {
+            
+            if(liSelector[x].id==idElementSelect && (!liSelector[x].querySelector('.hidden') || !liSelector[x].querySelector('.textLetterColorDisable')))
+                {
+                    const newImageDisable= liSelector[x].querySelector('.activeImageSelector');
+                    newImageDisable.classList.add('hidden');
+        
+                    const newImgTextDisable= liSelector[x].querySelector('.textLetterColor');
+                    newImgTextDisable.classList.add('textLetterColorDisable');
+                    continue;
+
+                } else if(liSelector[x].id!=idElementSelect && (liSelector[x].querySelector('.hidden') || liSelector[x].querySelector('.textLetterColorDisable')))
+                    {
+                        const imgDisable= liSelector[x].querySelector('.hidden');
+                        imgDisable.classList.remove('hidden');
+            
+                        const imgTextDisable=liSelector[x].querySelector('.textLetterColorDisable');
+                        imgTextDisable.classList.remove('textLetterColorDisable');
+                        continue;
+                    }
+                        
+
+        }
+}
