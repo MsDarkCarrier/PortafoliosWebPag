@@ -27,11 +27,10 @@ function ready(fn) {
      window.addEventListener('scroll',function(){
 
         //console.log(this.window.scrollY);
-  
         if(ScrollDelta(this)==-1)
-        {   
+        {    
             var movSelectorDown=0;
-            var secPagDirection=GetScrollRealObject(this.window.scrollY,document.getElementById('secondPagTriggerDown').getBoundingClientRect().y) -150;
+            var secPagDirection=GetScrollRealObject(this.window.scrollY,document.getElementById('secondPagTriggerDown').getBoundingClientRect().y)+35;
             var referenceSecPag=(this.window.scrollY>secPagDirection && this.window.scrollY<(secPagDirection+200))?2:0;
             movSelectorDown=referenceSecPag;
 
