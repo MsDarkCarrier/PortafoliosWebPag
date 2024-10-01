@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jacquarda+Bastarda+9+Charted&family=Jersey+25&family=Lobster&family=Pixelify+Sans:wght@400..700&family=Roboto+Slab:wght@100..900&display=swap');
+
+#threePagConteiner
+{
+    display: flex;
+    font-family: 'Jersey 25', sans-serif;
+    background-color: none;
+    height: 66%;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+    margin-bottom: 80px;
+    justify-content: start;
+    align-items: start;
+    flex-flow: column wrap;
+    margin: 0%;
+    padding: 0%;
+}
+
+#threePagConteiner section
+{
+    display: flex;
+    flex-flow: row wrap ;
+    height: 100%;
+    width: 100%;
+    justify-content: start;
+    align-items: center;
+}
+
+#threePagConteiner article
+{
+    position: relative;
+    background: rgb(230, 230, 230);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    padding: 0%;
+    height: 400px;
+    width: 310px;
+    padding: 10px;
+}
+
+#threePagConteiner article p
+{
+    font-size: 30px;
+}
+
+.imgCard
+{
+    display: flex;
+    padding: 0%;
+    margin: 0%;
+    position: relative;
+    height: 150px;
+    width: 300px;
+}
+
+#threePagConteiner article div
+{
+    display: flex;
+    justify-content: center;
+}
+
+#threePagConteiner article div img
+{
+    position: relative;
+    height: 30px;
+    width: 30px;
+}
+
+#threePagConteiner article ul
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 0%;
+    padding: 0%;
+    margin-bottom: 10px;
+}
+
+#threePagConteiner article ul li
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: start;
+    align-items: center;
+    color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    padding: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0%;
+
+}
+
+#threePagConteiner article  ul li p
+{
+    font-size: 11px;
+    font-family: "Concert One", sans-serif;
+}
+
+#threePagConteiner article  ul li img
+{
+    height: 15px;
+    width: 15px;
+    margin-right:7px ;
+}
+
+
+.spaccingCards
+{
+    margin-right: 50px;
+}
