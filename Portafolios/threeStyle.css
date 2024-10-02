@@ -38,7 +38,7 @@
     border-radius: 30px;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     padding: 0%;
-    height: 400px;
+    height: 415px;
     width: 310px;
     padding: 10px;
 }
@@ -53,6 +53,7 @@
     display: flex;
     padding: 0%;
     margin: 0%;
+    transition: 0.5 ease-in-out;
     position: relative;
     height: 150px;
     width: 300px;
@@ -69,7 +70,31 @@
     position: relative;
     height: 30px;
     width: 30px;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
 }
+
+#threePagConteiner article div img:hover
+{
+    animation-name: SelectorThreeImgAnimation;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    opacity: 0%;
+}
+
+@keyframes SelectorThreeImgAnimation
+{
+    from
+    {
+        opacity: 100%;
+    }
+    to
+    {
+        opacity: 0%;
+    }
+}
+
 
 #threePagConteiner article ul
 {
@@ -113,4 +138,13 @@
 .spaccingCards
 {
     margin-right: 50px;
+}
+
+
+@media screen and (max-width:829px)
+{
+    #threePagConteiner article
+    {
+        margin-bottom: 40px;
+    }
 }
