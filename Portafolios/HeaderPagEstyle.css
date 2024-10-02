@@ -369,6 +369,11 @@ width: 50%;
 
 @media screen and (max-width:1068px)
 {
+    .textLetterColor
+    {
+        font-family: 'Jersey 25', sans-serif;
+        font-size: 130%;
+    }
     #imagenArticle
     {
     position: absolute;
