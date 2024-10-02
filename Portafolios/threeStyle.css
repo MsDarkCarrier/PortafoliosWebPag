@@ -148,3 +148,18 @@
         margin-bottom: 40px;
     }
 }
+
+@media screen and (max-width:381px)
+{
+    #threePagConteiner article
+    {
+    height: 420px;
+    width: 250px;
+    }
+
+    .imgCard
+    {
+    height: 100px;
+    width: 250px;
+    }
+}
