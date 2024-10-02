@@ -140,6 +140,81 @@
     margin-right: 50px;
 }
 
+.threeEducationPag
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: start;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.colorContextBlackThree
+{
+    background-color: rgb(31, 31, 31); 
+}
+.colorContextWhiteThree
+{
+    background-color: rgb(63, 63, 63);
+}
+
+.threeEducationPag img
+{
+    height: 40px;
+    width: 40px;
+    margin-right: 5px;
+}
+
+.threeEducationPag p
+{
+    font-size: 20px;
+    font-family: "Concert One", sans-serif;
+    color: white;
+}
+
+.threeEducationPag div
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: start;
+    align-items: center;
+    color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    padding: 2px;
+    padding-right: 10px;
+    margin: 0%;
+    margin-left: 15px;
+    border-radius: 10px;
+}
+
+.threeEducationPag div p
+{
+    font-size: 8px;
+    font-family: "Concert One", sans-serif;
+}
+
+.threeEducationPag div img
+{
+    height: 27px;
+    width: 27px;
+    margin-right: 5px;
+}
+
+@media screen and (max-width:761px)
+{
+    .threeEducationPag 
+    {
+        padding-top: 5px;
+        padding-bottom: 15px;
+    }
+    .threeEducationPag p
+    {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
 
 @media screen and (max-width:829px)
 {
