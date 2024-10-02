@@ -32,16 +32,20 @@ function ready(fn) {
             var movSelectorDown=0;
             var secPagDirection=GetScrollRealObject(this.window.scrollY,document.getElementById('secondPagTriggerDown').getBoundingClientRect().y)+35;
             var referenceSecPag=(this.window.scrollY>secPagDirection && this.window.scrollY<(secPagDirection+200))?2:0;
-            movSelectorDown=referenceSecPag;
+            var threePagDirection=GetScrollRealObject(this.window.scrollY,this.document.getElementById('threePagConteiner').getBoundingClientRect().y)+35;
+            var refereceThreePag= (this.window.scrollY>threePagDirection && this.window.scrollY<(threePagDirection+100))?3:0;
+            movSelectorDown=(referenceSecPag!=0)?referenceSecPag:movSelectorDown;
+            movSelectorDown=(refereceThreePag!=0)?refereceThreePag:movSelectorDown;
+            console.log(referenceSecPag);
 
             switch(movSelectorDown)
             {
                 case(2):
-                var oldScroll=this.window.scrollY;
-                var maxSroll=GetScrollRealObject(this.window.scrollY,document.getElementById('callSecPag').getBoundingClientRect().y);
-                LerpFuncion(oldScroll,maxSroll,this);
                 EfectElementHeader("skillsId");
-                
+                break;
+
+                case(3):
+                EfectElementHeader("proyectoId");
                 break;
             }
 
@@ -56,17 +60,20 @@ function ready(fn) {
             var secPagDirection=GetScrollRealObject(this.window.scrollY,document.getElementById('firstPagTriggerUp').getBoundingClientRect().y)+150;
             var referenceSecPag=(this.window.scrollY<secPagDirection && this.window.scrollY>(secPagDirection-200))?1:0;
 
-            movSelectorDown=referenceSecPag;
+            var threePagDirection=GetScrollRealObject(this.window.scrollY,document.getElementById('secTriggerUp').getBoundingClientRect().y)+150;
+            var refereceThreePag=(this.window.scrollY<threePagDirection && this.window.scrollY>(threePagDirection-200))?2:0;
+
+            movSelectorDown=(referenceSecPag!=0)?referenceSecPag:movSelectorDown;
+            movSelectorDown=(refereceThreePag!=0)?refereceThreePag:movSelectorDown;
             
             switch(movSelectorDown)
             {
                 case(1):
-                
-                var oldScroll=this.window.scrollY;
-                var maxSroll=0;
-                LerpFuncion(oldScroll,maxSroll,this);
                 EfectElementHeader("resumenId");
-                
+                break;
+
+                case(2):
+                EfectElementHeader("skillsId");
                 break;
             }
             
@@ -143,6 +150,10 @@ liSelector.forEach(thumb =>{
             break;
 
             case("proyectoId"):
+            var oldScroll=window.scrollY;
+            var maxSroll=GetScrollRealObject(window.scrollY,document.getElementById('threePagConteiner').getBoundingClientRect().y);
+            LerpFuncion(oldScroll,maxSroll,window);
+
             break;
 
             case("contactoId"):
