@@ -91,7 +91,7 @@ function ready(fn) {
             checkSelectorList.classList.remove('opacityControl');
             setTimeout(() => {
                 checkSelectorList.classList.remove('disableDisplay');
-              },360);
+              },350);
         } 
     else
     {
