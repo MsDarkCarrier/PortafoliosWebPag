@@ -10,7 +10,7 @@ header
     animation-name: InitPagOne;
     animation-duration: 0.8s;
     animation-timing-function: linear;
-    margin-bottom: 30px;
+    margin: 0%;
 }
 
 #conteinerSections
@@ -22,14 +22,17 @@ header
    animation-name: InitPagOne;
    animation-duration: 0.8s;
    animation-timing-function: linear;
+}
 
+.xd
+{
+    margin-top: 150px;
 }
 
 #conteinerSections section
 {
     display:flex;
     flex-flow: row wrap ;
-    margin-top: 55px;
     margin: 0%;
     padding: 0%;
     font-family: "Jersey 25", sans-serif;

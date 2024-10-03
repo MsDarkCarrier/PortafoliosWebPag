@@ -42,37 +42,14 @@
         </section>
     </div>
 
-    <div id="contentDropMenu" class="animationInicialOut">
-        <input id="checkMenu" type="checkbox">
-        <div id="backGroundContentFixed"><h1>hiddentext</h1></div>
-        <div id="menuPanelAndroid">
-            <div id="controlMenuDrop">
-                <section id="panelControl">
-                    <article id="panelControlImg">
-                        <img src="Logo.png">
-                    </article>
-                    <article id="panelControlText">
-                        <p>CV Digital</p>
-                    </article>
-                    <article id="panelControlCancel">
-                        <img src="CancelIconMenu.png" alt="">
-                    </article>
-                </section>
-                <ul>
-
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <header  class="animationInicialOut" >
-        <section>
+    <header  class="animationInicialOut" style="margin: 0%;" >
+        <section id="headerSectionFirst" style="padding: 0%; margin: 0%;">
             <article id="imagenArticle">
                 <img src="Logo.png" alt="">
             </article>
             <article id="listArticle">
                 <ul class="disableDisplay opacityControl">
-                    <li id="inicioId" class="liHeader spaceLetter"> <div><img class="activeImageSelector" src="ArrowElement.gif" alt="" ></div> <p class="textLetterColor">Inicio</p></li>
+                    <li style="position: relative; z-index: 100px;" id="inicioId" class="liHeader spaceLetter"> <div><img class="activeImageSelector" src="ArrowElement.gif" alt="" ></div> <p class="textLetterColor">Inicio</p></li>
                     <li id="resumenId" class="liHeader spaceLetter"> <div><img class="activeImageSelector hidden" src="ArrowElement.gif" alt=""></div> <p class="textLetterColor textLetterColorDisable">Resumen</p></li>
                     <li id="skillsId" class="liHeader spaceLetter"> <div><img class="activeImageSelector" src="ArrowElement.gif" alt="" ></div> <p class="textLetterColor">Skills</p></li>
                     <li id="proyectoId" class="liHeader spaceLetter"> <div><img class="activeImageSelector" src="ArrowElement.gif" alt="" ></div> <p class="textLetterColor">Proyectos</p></li>
@@ -82,19 +59,33 @@
             <article id="menuAndroid">
                 <img id="activableBottomMenu"  src="Menu.png" alt="">
             </article>
+
+            <article style="height: 100%; width: 100%; position: absolute;" class="animationInicialOut" >
+                <div id="backGroundContentFixed"><h1>hiddentext</h1></div>
+                
+                <div id="menuPanelAndroid" >
+                <section id="panelControl">
+                    <article id="panelControlImg">
+                    <p id="panelControlText">CV Digital</p>
+                    <img id="panelControlCancel" src="CancelIconMenu.png" alt="">
+                    </article>
+                    </section>
+                </div>
+                <input id="checkMenu" type="checkbox">
+            </article>
         </section>
+
     </header>
 
-        <div id="conteinerSections"  class="animationInicialOut">
+        <div id="conteinerSections"  class="animationInicialOut" >
+            <div class="xd">
+
+            </div>
             <section>
                 <article id="imageConteinerSection">
                     <div>
                         <img src="YoImg.png" alt="">
                     </div>
-    
-                    <div>
-                    </div>
-    
                     <button id="botCv">DESCARGA MI CV</button>
                 </article>
     

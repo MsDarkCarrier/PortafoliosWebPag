@@ -26,17 +26,18 @@ function ready(fn) {
 
      window.addEventListener('scroll',function(){
 
-        //console.log(this.window.scrollY);
+        console.log(this.window.scrollY);
         if(ScrollDelta(this)==-1)
         {    
             var movSelectorDown=0;
-            var secPagDirection=GetScrollRealObject(this.window.scrollY,document.getElementById('secondPagTriggerDown').getBoundingClientRect().y)+35;
+            var secPagDirection=GetScrollRealObject(this.window.scrollY,document.getElementById('secondPagTriggerDown').getBoundingClientRect().y);
             var referenceSecPag=(this.window.scrollY>secPagDirection && this.window.scrollY<(secPagDirection+200))?2:0;
-            var threePagDirection=GetScrollRealObject(this.window.scrollY,this.document.getElementById('threePagConteiner').getBoundingClientRect().y)+35;
+            var threePagDirection=GetScrollRealObject(this.window.scrollY,this.document.getElementById('threePagConteiner').getBoundingClientRect().y)-250;
             var refereceThreePag= (this.window.scrollY>threePagDirection && this.window.scrollY<(threePagDirection+100))?3:0;
             movSelectorDown=(referenceSecPag!=0)?referenceSecPag:movSelectorDown;
             movSelectorDown=(refereceThreePag!=0)?refereceThreePag:movSelectorDown;
-            console.log(referenceSecPag);
+            
+            //console.log(threePagDirection);
 
             switch(movSelectorDown)
             {
@@ -57,7 +58,7 @@ function ready(fn) {
 
             
             var movSelectorDown=0;
-            var secPagDirection=GetScrollRealObject(this.window.scrollY,document.getElementById('firstPagTriggerUp').getBoundingClientRect().y)+150;
+            var secPagDirection=GetScrollRealObject(this.window.scrollY,document.getElementById('firstPagTriggerUp').getBoundingClientRect().y)-200;
             var referenceSecPag=(this.window.scrollY<secPagDirection && this.window.scrollY>(secPagDirection-200))?1:0;
 
             var threePagDirection=GetScrollRealObject(this.window.scrollY,document.getElementById('secTriggerUp').getBoundingClientRect().y)+150;
@@ -137,21 +138,21 @@ liSelector.forEach(thumb =>{
             break;
 
             case("resumenId"):
-            var oldScroll=this.window.scrollY;
+            var oldScroll=window.scrollY;
             var maxSroll=0;
-            LerpFuncion(oldScroll,maxSroll,this);
+            LerpFuncion(oldScroll,maxSroll,window);
             EfectElementHeader("resumenId");
             break;
 
             case("skillsId"):
             var oldScroll=window.scrollY;
-            var maxSroll=GetScrollRealObject(window.scrollY,document.getElementById('callSecPag').getBoundingClientRect().y);
+            var maxSroll=GetScrollRealObject(window.scrollY,document.getElementById('callSecPag').getBoundingClientRect().y)-150;
             LerpFuncion(oldScroll,maxSroll,window);
             break;
 
             case("proyectoId"):
             var oldScroll=window.scrollY;
-            var maxSroll=GetScrollRealObject(window.scrollY,document.getElementById('threePagConteiner').getBoundingClientRect().y);
+            var maxSroll=GetScrollRealObject(window.scrollY,document.getElementById('threePagConteiner').getBoundingClientRect().y)-100;
             LerpFuncion(oldScroll,maxSroll,window);
 
             break;
