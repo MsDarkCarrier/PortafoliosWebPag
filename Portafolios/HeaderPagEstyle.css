@@ -1,39 +1,36 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap');
+
 .jacquard-12-regular {
     font-family: "Jacquard 12", system-ui;
     font-weight: 400;
     font-style: normal;
-}  
+}
 
 .stopScrolling {
     height: 100%;
     overflow: hidden;
 }
 
-body
-{
+body {
     margin: 0%;
     padding: 0%;
     background-color: rgba(0, 0, 0, 0.024);
-    background: rgb(99,99,99); 
-    background: radial-gradient(49% 81% at 45% 47%, #E2E2E2E6 0%, #B5B2B2E6 100%),radial-gradient(113% 91% at 17% -2%, #535353E6 1%, #FF000000 99%),radial-gradient(142% 91% at 83% 7%, #FFFFFFE6 1%, #130101E6 99%);
+    background: rgb(99, 99, 99);
+    background: radial-gradient(49% 81% at 45% 47%, #E2E2E2E6 0%, #B5B2B2E6 100%), radial-gradient(113% 91% at 17% -2%, #535353E6 1%, #FF000000 99%), radial-gradient(142% 91% at 83% 7%, #FFFFFFE6 1%, #130101E6 99%);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
-header
-{
-  position: relative;
-  margin: 0%;
-  padding: 0%;
-  background-color: transparent;
-  z-index: 4;
+header {
+    position: relative;
+    margin: 0%;
+    padding: 0%;
+    background-color: transparent;
+    z-index: 4;
 }
 
-#headerSectionFirst
-{
+#headerSectionFirst {
     width: 100%;
     display: flex;
     position: relative;
@@ -44,24 +41,22 @@ header
     padding: 2px;
     border-radius: 0% 0% 3% 3%;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    
+
 }
 
-#imagenArticle
-{
+#imagenArticle {
     height: 13%;
     width: 13%;
 }
-#imagenArticle img
-{
+
+#imagenArticle img {
     display: flex;
     position: relative;
     height: 100%;
     width: 100%;
 }
 
-#listArticle
-{
+#listArticle {
     justify-content: end;
     display: flex;
     position: relative;
@@ -70,8 +65,7 @@ header
     letter-spacing: 0.5px;
 }
 
-#listArticle ul
-{
+#listArticle ul {
     list-style: none;
     display: flex;
     flex-flow: row wrap;
@@ -81,42 +75,37 @@ header
     z-index: 3;
 }
 
-.textLetterColorDisable
-{
+.textLetterColorDisable {
     color: rgb(255, 255, 255);
-    --borderTextHeader:rgb(255, 255, 255);
+    --borderTextHeader: rgb(255, 255, 255);
 }
 
-.liHeader
-{
-    color:rgba(255, 255, 255, 0.859);
-    cursor:var(--cursorDisable,pointer);
+.liHeader {
+    color: rgba(255, 255, 255, 0.859);
+    cursor: var(--cursorDisable, pointer);
     user-select: none;
 }
 
-.liHeader:hover
-{
+.liHeader:hover {
     color: rgb(255, 255, 255);
-    --borderTextHeader:rgb(255, 255, 255);
-    --viImg:100%;
+    --borderTextHeader: rgb(255, 255, 255);
+    --viImg: 100%;
     --movImg: 0px;
 }
 
-.textLetterColor
-{
+.textLetterColor {
     font-family: "Jacquard 12", system-ui;
     font-size: 160%;
     padding-right: 13px;
     user-select: none;
     cursor: pointer;
-    border-color: var(--borderTextHeader,rgb(97, 103, 122));
+    border-color: var(--borderTextHeader, rgb(97, 103, 122));
     border-style: solid;
     border-width: 0px 3px 0px 0px;
     transition: 0.3s ease-in-out;
 }
 
-.liHeader div
-{
+.liHeader div {
     display: flex;
     position: absolute;
     height: 100%;
@@ -126,70 +115,64 @@ header
     align-items: start;
 }
 
-.activeImageSelector
-{
+.activeImageSelector {
     position: relative;
-    height:17%;
+    height: 17%;
     user-select: none;
-    margin: var(--movImg,-5px);
-    opacity: var(--viImg,0%);
+    margin: var(--movImg, -5px);
+    opacity: var(--viImg, 0%);
     transition: 0.3s ease-in-out;
-    cursor:none;
+    cursor: none;
 }
 
-.hidden
-{
+.hidden {
     user-select: none;
     visibility: hidden;
 }
-.notCursor
-{
-    --cursorDisable:auto;
-}
-.spaceLetter
-{
- margin-left: 45px;
+
+.notCursor {
+    --cursorDisable: auto;
 }
 
-#menuAndroid
-{
-    display: none; 
+.spaceLetter {
+    margin-left: 45px;
+}
+
+#menuAndroid {
+    display: none;
     visibility: hidden;
 }
 
-#checkMenu
-{
+#checkMenu {
     display: none;
     opacity: 0%;
-    position:var(--positionCheck,absolute);
-    height: var(--heightCheckActive,60px);
-    width:var(--widthCheckActive,60px);
+    position: var(--positionCheck, absolute);
+    height: var(--heightCheckActive, 60px);
+    width: var(--widthCheckActive, 60px);
     top: -30px;
     left: 1;
     right: 0;
-    margin-top: var(--marginCheckActive,40px);
-    margin-right: var(--marginRightCheckActive,8px);
+    margin-top: var(--marginCheckActive, 40px);
+    margin-right: var(--marginRightCheckActive, 8px);
     z-index: 10;
     cursor: pointer;
 }
 
-header:has(:checked)
-{
-    --opasityMenuPanelAdmin:100%;
-    --indexMenuPanelAdmin:2;
-    --relativePositionControlMenuDrop:0px;
-    --displayCheckMenu:flex;
-    --heightCheckActive:30px;
-    --widthCheckActive:30px;
-    --marginCheckActive:72px;
-    --marginRightCheckActive:50px;
-    --positionCheck:fixed;
-    --positionSpann:0px;
+header:has(:checked) {
+    --opasityMenuPanelAdmin: 100%;
+    --indexMenuPanelAdmin: 2;
+    --relativePositionControlMenuDrop: 0px;
+    --displayCheckMenu: flex;
+    --heightCheckActive: 30px;
+    --widthCheckActive: 30px;
+    --marginCheckActive: 72px;
+    --marginRightCheckActive: 50px;
+    --positionCheck: fixed;
+    --positionSpann: 0px;
 
 }
 
-#activableBottomMenu
-{
+#activableBottomMenu {
     display: flex;
     position: relative;
     height: 5%;
@@ -197,36 +180,32 @@ header:has(:checked)
     transition: 0.5s ease-in-out;
 }
 
-#activableBottomMenu:hover
-{
+#activableBottomMenu:hover {
     opacity: 80%;
 }
 
-#spannContext
-{
-    height: 100%; 
-    width: 100%; 
-    position: absolute; 
-    right: var(--positionSpann,1500px);
+#spannContext {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    right: var(--positionSpann, 1090px);
 }
 
-#backGroundContentFixed
-{
+#backGroundContentFixed {
     background-color: rgba(28, 28, 28, 0.631);
-    position:fixed;
+    position: fixed;
     height: 100%;
     width: 2000px;
     color: rgba(240, 248, 255, 0);
     transition: 0.2s ease-in-out;
-    opacity: var(--opasityMenuPanelAdmin,0%);
-    z-index: var(--indexMenuPanelAdmin,-1);
+    opacity: var(--opasityMenuPanelAdmin, 0%);
+    z-index: var(--indexMenuPanelAdmin, -1);
 }
 
 
-#menuPanelAndroid
-{
+#menuPanelAndroid {
     top: 1;
-    position:fixed;
+    position: fixed;
     display: flex;
     margin: 0%;
     padding: 0%;
@@ -236,14 +215,13 @@ header:has(:checked)
     height: 100%;
     width: 100%;
     transition: 0.2s ease-in-out;
-    opacity: var(--opasityMenuPanelAdmin,0%);
-    z-index: var(--indexMenuPanelAdmin,-1);
+    opacity: var(--opasityMenuPanelAdmin, 0%);
+    z-index: var(--indexMenuPanelAdmin, -1);
     margin: 0%;
     padding: 0%;
 }
 
-#controlMenuDrop ul
-{
+#controlMenuDrop ul {
     height: 100%;
     width: 100%;
     display: flex;
@@ -253,24 +231,22 @@ header:has(:checked)
     padding: 0%;
 }
 
-#panelControl
-{
+#panelControl {
 
-    position:relative;
+    position: relative;
     display: flex;
     flex-flow: column wrap;
     height: 100%;
     width: 370px;
-    right: var(--relativePositionControlMenuDrop,-600px);
+    right: var(--relativePositionControlMenuDrop, -600px);
     transition: 0.5s ease-in-out;
     background-color: rgb(255, 255, 255);
     margin: 0%;
     padding: 0%;
-    
+
 }
 
-#panelControlImg
-{
+#panelControlImg {
     display: flex;
     flex-flow: row wrap;
     width: 100%;
@@ -287,130 +263,113 @@ header:has(:checked)
 
 }
 
-#panelControlText
-{
+#panelControlText {
     font-size: 200%;
     margin-left: 20px;
 }
 
 
-#panelControlCancel
-{
+#panelControlCancel {
     margin-right: 50px;
     margin-left: 30px;
-    position: relative; 
-    height: 46%; 
-    width: 10%; 
+    position: relative;
+    height: 46%;
+    width: 10%;
 }
 
-#panelControlCancel
-{
+#panelControlCancel {
     height: 40px;
     width: 40px;
     transition: 0.5s ease-in;
 }
 
-#panelControlCancel:hover
-{
+#panelControlCancel:hover {
     opacity: 30%;
 }
 
-.panelElable
-{
+.panelElable {
     opacity: 0%;
     z-index: -1;
-    animation-name: outAmination ;
+    animation-name: outAmination;
     animation-duration: 0.4s;
     animation-timing-function: linear;
     display: none;
-    visibility:hidden;
-    
+    visibility: hidden;
+
 }
 
-.animationInicialOut
-{
+.animationInicialOut {
     visibility: hidden;
     display: none;
 }
 
-.disableDisplay
-{
+.disableDisplay {}
 
-}
-.opacityControl
-{
+.opacityControl {
     opacity: 100%;
 }
 
-.hiddenTextSpancer
-{
+.hiddenTextSpancer {
     background-color: rgba(19, 19, 19, 0.809);
     font-size: 5px;
-    height: 100%; 
+    height: 100%;
     width: 100%;
 }
 
-@keyframes leftAnimationDisplay
-{
-    from
-    {
+@keyframes leftAnimationDisplay {
+    from {
         margin-right: 0px;
         opacity: 100%;
     }
-    to
-    {
+
+    to {
         margin-right: -200px;
         opacity: 0%;
     }
 }
 
 
-@keyframes outAmination
-{
-    from
-    {
+@keyframes outAmination {
+    from {
         opacity: 100%;
         z-index: 30;
-        visibility:visible;
+        visibility: visible;
     }
-    to
-    {
+
+    to {
         opacity: 0%;
         z-index: -50;
         visibility: hidden;
     }
 }
 
-@media screen and (max-width:1068px)
-{
-    .textLetterColor
-    {
+@media screen and (max-width:1068px) {
+    .textLetterColor {
         font-family: 'Jersey 25', sans-serif;
         font-size: 130%;
     }
-    #imagenArticle
-    {
-    position: absolute;
-    height: 85px;
-    width: 155px;
-    margin: 5px;
-    padding-bottom: 5px;
-    }
-    #menuAndroid
-    {
-    display:flex; 
-    visibility: visible;
-    justify-content: end;
-    display: flex;
-    position: relative;
-    height: 100%;
-    width: 100%;
-    margin-top: 28px;
-    letter-spacing: 0.5px;
+
+    #imagenArticle {
+        position: absolute;
+        height: 85px;
+        width: 155px;
+        margin: 5px;
+        padding-bottom: 5px;
     }
 
-    #menuAndroid img
-    {
+    #menuAndroid {
+        display: flex;
+        visibility: visible;
+        justify-content: end;
+        display: flex;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        margin-top: 28px;
+        letter-spacing: 0.5px;
+    }
+
+    #menuAndroid img {
         height: 40px;
         width: 40px;
         margin-top: 20px;
@@ -418,8 +377,7 @@ header:has(:checked)
         margin-bottom: 20px;
     }
 
-    #listArticle ul
-    {
+    #listArticle ul {
         flex-flow: column wrap;
         position: fixed;
         right: 15px;
@@ -430,52 +388,42 @@ header:has(:checked)
 
     }
 
-    .opacityControl
-    {
-    opacity:0%;
+    .opacityControl {
+        opacity: 0%;
     }
 
-    .liHeader
-    {
-    position: relative;
-    height: 50px;
-    width: 150px;
-    color:rgb(19, 19,19);
-    padding: 0%;
+    .liHeader {
+        position: relative;
+        height: 50px;
+        width: 150px;
+        color: rgb(19, 19, 19);
+        padding: 0%;
     }
 
-    .liHeader:hover
-    {
-        color:rgb(19, 19,19);
+    .liHeader:hover {
+        color: rgb(19, 19, 19);
     }
 
-    .textLetterColorDisable
-    {
-    color: rgb(19, 19, 19);
+    .textLetterColorDisable {
+        color: rgb(19, 19, 19);
     }
 
-    .activeImageSelector
-    {
-        display:none;
+    .activeImageSelector {
+        display: none;
         visibility: hidden;
     }
 
-    #checkMenu
-    {
-    display:flex;
+    #checkMenu {
+        display: flex;
     }
 
-    
-    .disableDisplay
-    {
-        animation-name: leftAnimationDisplay ;
-        animation-duration: 0.1s;
+
+    .disableDisplay {
+        animation-name: leftAnimationDisplay;
+        animation-duration: 0.14s;
         animation-timing-function: ease-out;
         display: none;
         visibility: hidden;
     }
 
 }
-
-
-
