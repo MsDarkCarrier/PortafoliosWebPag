@@ -27,18 +27,25 @@ function ready(fn) {
 
      window.addEventListener('scroll',function(){
 
-        //console.log(this.window.scrollY);
+       // console.log();
         if(ScrollDelta(this)==-1)
         {    
             var movSelectorDown=0;
             var secPagDirection=GetScrollRealObject(this.window.scrollY,document.getElementById('secondPagTriggerDown').getBoundingClientRect().y);
             var referenceSecPag=(this.window.scrollY>secPagDirection && this.window.scrollY<(secPagDirection+200))?2:0;
-            var threePagDirection=GetScrollRealObject(this.window.scrollY,this.document.getElementById('threePagConteiner').getBoundingClientRect().y)-250;
-            var refereceThreePag= (this.window.scrollY>threePagDirection && this.window.scrollY<(threePagDirection+100))?3:0;
+            var threePagDirection=GetScrollRealObject(this.window.scrollY,this.document.getElementById('threePagConteiner').getBoundingClientRect().y)-350;
+            var refereceThreePag= (this.window.scrollY>threePagDirection && this.window.scrollY<(threePagDirection+200))?3:0;
+
+            var scrollHeight = this.document.body.scrollHeight;
+            var scrollPosition = this.window.scrollY;
+            var referenceFouPag=((scrollHeight - scrollPosition)<1000)?4:0;
+
+            console.log(scrollHeight - scrollPosition);
+ 
             movSelectorDown=(referenceSecPag!=0)?referenceSecPag:movSelectorDown;
             movSelectorDown=(refereceThreePag!=0)?refereceThreePag:movSelectorDown;
-            
-            //console.log(threePagDirection);
+            movSelectorDown=(referenceFouPag!=0)?referenceFouPag:movSelectorDown;
+
 
             switch(movSelectorDown)
             {
@@ -48,6 +55,10 @@ function ready(fn) {
 
                 case(3):
                 EfectElementHeader("proyectoId");
+                break;
+
+                case(4):
+                EfectElementHeader("contactoId");
                 break;
             }
 
@@ -62,11 +73,16 @@ function ready(fn) {
             var secPagDirection=GetScrollRealObject(this.window.scrollY,document.getElementById('firstPagTriggerUp').getBoundingClientRect().y)-200;
             var referenceSecPag=(this.window.scrollY<secPagDirection && this.window.scrollY>(secPagDirection-200))?1:0;
 
-            var threePagDirection=GetScrollRealObject(this.window.scrollY,document.getElementById('secTriggerUp').getBoundingClientRect().y)+150;
+            var threePagDirection=GetScrollRealObject(this.window.scrollY,document.getElementById('secTriggerUp').getBoundingClientRect().y);
             var refereceThreePag=(this.window.scrollY<threePagDirection && this.window.scrollY>(threePagDirection-200))?2:0;
+
+            var fourPagDirection=GetScrollRealObject(this.window.scrollY,this.document.getElementById('threePagConteiner').getBoundingClientRect().y)+450;
+            var refereceFourPag= (this.window.scrollY>threePagDirection && this.window.scrollY<(threePagDirection+200))?3:0;
+
 
             movSelectorDown=(referenceSecPag!=0)?referenceSecPag:movSelectorDown;
             movSelectorDown=(refereceThreePag!=0)?refereceThreePag:movSelectorDown;
+            movSelectorDown=(refereceFourPag!=0)?refereceFourPag:movSelectorDown;
             
             switch(movSelectorDown)
             {
@@ -76,6 +92,10 @@ function ready(fn) {
 
                 case(2):
                 EfectElementHeader("skillsId");
+                break;
+
+                case(3):
+                EfectElementHeader("proyectoId");
                 break;
             }
             
@@ -160,7 +180,12 @@ liSelector.forEach(thumb =>{
             var oldScroll=window.scrollY;
             var maxSroll=GetScrollRealObject(window.scrollY,document.getElementById('threePagConteiner').getBoundingClientRect().y)-100;
             LerpFuncion(oldScroll,maxSroll,window);
+            break;
 
+            case("contactoId"):
+            var oldScroll=window.scrollY;
+            var maxSroll=GetScrollRealObject(window.scrollY,document.querySelector('footer').getBoundingClientRect().y)-100;
+            LerpFuncion(oldScroll,maxSroll,window);
             break;
 
         }
