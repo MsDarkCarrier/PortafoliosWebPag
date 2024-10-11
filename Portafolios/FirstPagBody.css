@@ -74,6 +74,16 @@ header
     font-family: "Jersey 25", sans-serif;
     cursor: pointer;
 }
+#botCv a
+{
+    position: absolute;
+    margin: -10px 0px 0px -12px;
+    opacity: 0%;
+    height: 100%;
+    width: 100%;
+    background-color: aliceblue;
+}
+
 #botCv::after
 {
     content: 'DESCARGA MI CV';
