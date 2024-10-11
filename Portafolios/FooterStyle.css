@@ -112,6 +112,7 @@ font-style: oblique;
 {
     font-style: oblique;
     color: rgb(213, 213, 213);
+    cursor: pointer;
 }
 
 #infoPart div img
@@ -153,16 +154,16 @@ font-style: oblique;
 
     #imgPart
     {
-        height: 100%;
-        width: 100%;
+        height: 95%;
+        width: 95%;
         align-items: center;
         justify-content: center;
     }
 
     #textPart
     {
-        height: 100%;
-        width: 100%;
+        height: 98%;
+        width: 98%;
         align-items: center;
         justify-content: center;
     }
