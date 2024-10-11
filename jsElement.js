@@ -39,8 +39,6 @@ function ready(fn) {
             var scrollHeight = this.document.body.scrollHeight;
             var scrollPosition = this.window.scrollY;
             var referenceFouPag=((scrollHeight - scrollPosition)<1000)?4:0;
-
-            console.log(scrollHeight - scrollPosition);
  
             movSelectorDown=(referenceSecPag!=0)?referenceSecPag:movSelectorDown;
             movSelectorDown=(refereceThreePag!=0)?refereceThreePag:movSelectorDown;
@@ -107,23 +105,8 @@ function ready(fn) {
   })
 
   checkAndroidPanel.addEventListener('change',()=>{
-    if(checkAndroidPanel.checked)
-        {
-            spannContext.classList.add('spannContextIniTime');
-            spannContext.classList.remove('spannContextEndTime');
-            checkSelectorList.classList.remove('opacityControl');
-            setTimeout(() => {
-                checkSelectorList.classList.remove('disableDisplay');
-              },350);
-        } 
-    else
-    {
-        spannContext.classList.remove('spannContextIniTime');
-        spannContext.classList.add('spannContextEndTime');
 
-        checkSelectorList.classList.add('opacityControl');
-        checkSelectorList.classList.add('disableDisplay');
-    } 
+    EnableDisableCheck(checkAndroidPanel)
   })
 
 
@@ -167,25 +150,32 @@ liSelector.forEach(thumb =>{
             var oldScroll=window.scrollY;
             var maxSroll=0;
             LerpFuncion(oldScroll,maxSroll,window);
-            EfectElementHeader("resumenId");
+            checkAndroidPanel.checked=false;
+            EnableDisableCheck(checkAndroidPanel);
             break;
 
             case("skillsId"):
             var oldScroll=window.scrollY;
             var maxSroll=GetScrollRealObject(window.scrollY,document.getElementById('callSecPag').getBoundingClientRect().y)-150;
             LerpFuncion(oldScroll,maxSroll,window);
+            checkAndroidPanel.checked=false;
+            EnableDisableCheck(checkAndroidPanel);
             break;
 
             case("proyectoId"):
             var oldScroll=window.scrollY;
             var maxSroll=GetScrollRealObject(window.scrollY,document.getElementById('threePagConteiner').getBoundingClientRect().y)-100;
             LerpFuncion(oldScroll,maxSroll,window);
+            checkAndroidPanel.checked=false;
+            EnableDisableCheck(checkAndroidPanel);
             break;
 
             case("contactoId"):
             var oldScroll=window.scrollY;
             var maxSroll=GetScrollRealObject(window.scrollY,document.querySelector('footer').getBoundingClientRect().y)-100;
             LerpFuncion(oldScroll,maxSroll,window);
+            checkAndroidPanel.checked=false;
+            EnableDisableCheck(checkAndroidPanel);
             break;
 
         }
@@ -255,4 +245,25 @@ function EfectElementHeader(idElementSelect)
                         
 
         }
+}
+
+function EnableDisableCheck(check)
+{
+    if(check.checked)
+        {
+            spannContext.classList.add('spannContextIniTime');
+            spannContext.classList.remove('spannContextEndTime');
+            checkSelectorList.classList.remove('opacityControl');
+            setTimeout(() => {
+                checkSelectorList.classList.remove('disableDisplay');
+              },350);
+        } 
+    else
+    {
+        spannContext.classList.remove('spannContextIniTime');
+        spannContext.classList.add('spannContextEndTime');
+
+        checkSelectorList.classList.add('opacityControl');
+        checkSelectorList.classList.add('disableDisplay');
+    } 
 }
