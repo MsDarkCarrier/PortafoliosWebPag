@@ -169,7 +169,7 @@ header:has(:checked) {
     --marginRightCheckActive: 50px;
     --positionCheck: fixed;
     --positionSpann: 0px;
-
+    --backgroundMenuPanelAndroid:flex;
 }
 
 #activableBottomMenu {
@@ -188,18 +188,29 @@ header:has(:checked) {
     height: 100%;
     width: 100%;
     position: absolute;
-    right: var(--positionSpann, 1090px);
+    left: var(--positionSpann, 2500px);
+
+
 }
+
+.spannContextIniTime
+{
+    transition: 0.25s ease-in ;
+}
+
+.spannContextEndTime
+{
+    transition: 3s ease-out ;
+}
+
 
 #backGroundContentFixed {
     background-color: rgba(28, 28, 28, 0.631);
     position: fixed;
     height: 100%;
-    width: 2000px;
+    width: 100%;
     color: rgba(240, 248, 255, 0);
-    transition: 0.2s ease-in-out;
-    opacity: var(--opasityMenuPanelAdmin, 0%);
-    z-index: var(--indexMenuPanelAdmin, -1);
+    display: var(--backgroundMenuPanelAndroid,none);
 }
 
 
@@ -220,6 +231,8 @@ header:has(:checked) {
     margin: 0%;
     padding: 0%;
 }
+
+
 
 #controlMenuDrop ul {
     height: 100%;

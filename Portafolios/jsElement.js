@@ -2,6 +2,7 @@ const liSelector= document.querySelectorAll('.liHeader');
 const buttonSelection= document.getElementById('buttonInitPag');
 const checkAndroidPanel=document.getElementById('checkMenu');
 const checkSelectorList=document.getElementById('listArticle').querySelector('.disableDisplay');
+const spannContext=document.getElementById('spannContext');
 var lastScroll;
 
 function ready(fn) {
@@ -26,7 +27,7 @@ function ready(fn) {
 
      window.addEventListener('scroll',function(){
 
-        console.log(this.window.scrollY);
+        //console.log(this.window.scrollY);
         if(ScrollDelta(this)==-1)
         {    
             var movSelectorDown=0;
@@ -88,6 +89,8 @@ function ready(fn) {
   checkAndroidPanel.addEventListener('change',()=>{
     if(checkAndroidPanel.checked)
         {
+            spannContext.classList.add('spannContextIniTime');
+            spannContext.classList.remove('spannContextEndTime');
             checkSelectorList.classList.remove('opacityControl');
             setTimeout(() => {
                 checkSelectorList.classList.remove('disableDisplay');
@@ -95,6 +98,9 @@ function ready(fn) {
         } 
     else
     {
+        spannContext.classList.remove('spannContextIniTime');
+        spannContext.classList.add('spannContextEndTime');
+
         checkSelectorList.classList.add('opacityControl');
         checkSelectorList.classList.add('disableDisplay');
     } 
