@@ -157,8 +157,6 @@ liSelector.forEach(thumb =>{
 
             break;
 
-            case("contactoId"):
-            break;
         }
        
     })
